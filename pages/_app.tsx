@@ -1,7 +1,7 @@
 import React from "react";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import Head from "next/head";
-import ThirdwebGuideFooter from "../components/guide/ThirdwebGuideFooter";
+import Footer from "../components/guide/Footer";
 import "../styles/globals.css";
 import { AppProps } from "next/app";
 
@@ -12,19 +12,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
       <Head>
-        <title>thirdweb Token Drop Example</title>
+        <title>LaughTokenDrop</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="thirdweb Example Repository to Showcase the token drop contract, including claim and transfer features."
+          content="This is where you could mint LaughTokens."
         />
         <meta
           name="keywords"
-          content="thirdweb token drop, thirdweb token transfer, thirdweb token claim, thirdweb token claim phases"
+          content="LaughChain token drop, LaughChain token transfer, LauchChain token claim, LoughChain token claim phases"
         />
       </Head>
       <Component {...pageProps} />
-      <ThirdwebGuideFooter />
+      <Footer />
     </ThirdwebProvider>
   );
 }
